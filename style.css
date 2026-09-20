@@ -1,331 +1,111 @@
-/* =========================
-   BASIC
-========================= */
+```css
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    margin: 0;
+    min-height: 100%;
 }
 
 body {
-    background: #080a0d;
-    color: #f1f3f5;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    min-height: 100vh;
+    background: #03060a;
+    color: #edf6ff;
+    font-family: "Oxanium", sans-serif;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-    width: 100%;
-    height: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 6%;
-
-    border-bottom: 1px solid #20242a;
-
-    position: sticky;
-    top: 0;
-
-    background: #080a0d;
-    z-index: 10;
-}
-
-.logo {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.nav {
-    display: flex;
-    gap: 30px;
-}
-
-.nav a {
-    color: #9da4ad;
-    text-decoration: none;
-
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.nav a:hover {
-    color: #ffffff;
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-.hero {
-    min-height: calc(100vh - 70px);
-
+.menu {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    text-align: center;
-
     padding: 40px 20px;
 }
 
-.hero h1 {
-    font-size: clamp(36px, 7vw, 80px);
+/* Logo */
+
+.logo {
+    font-size: clamp(42px, 7vw, 76px);
     font-weight: 600;
-    letter-spacing: -2px;
+    letter-spacing: 0.25em;
+    margin-left: 0.25em;
+    margin-bottom: 70px;
 }
 
-.hero p {
-    margin-top: 10px;
+/* Main menu */
 
-    color: #8c949e;
-    font-size: 16px;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section {
-    width: min(1100px, 88%);
-    margin: 0 auto;
-
-    padding: 110px 0;
-}
-
-.section-title {
+.main-menu {
     display: flex;
-    align-items: baseline;
-    gap: 15px;
-
-    margin-bottom: 35px;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 240px;
 }
 
-.section-title span {
-    color: #69727c;
-    font-size: 12px;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 600;
-}
-
-
-/* =========================
-   CHARACTER GRID
-========================= */
-
-.character-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
-
-    gap: 18px;
-}
-
-.character-card {
+.main-menu a {
+    position: relative;
     display: block;
-
-    color: #ffffff;
+    padding: 5px 0;
+    color: #edf6ff;
     text-decoration: none;
-
-    background: #101318;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    transition: color 0.15s ease,
+                transform 0.15s ease;
 }
 
-.character-card:hover {
-    transform: translateY(-4px);
-    background: #15191f;
+.selector {
+    display: inline-block;
+    width: 24px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.15s ease,
+                transform 0.15s ease;
 }
 
-
-/* =========================
-   PORTRAIT
-========================= */
-
-.portrait {
-    width: 100%;
-    aspect-ratio: 9 / 14;
-
-    background: #171b20;
-
-    overflow: hidden;
+.main-menu a:hover {
+    color: #8fd0ff;
+    transform: translateX(6px);
 }
 
-.portrait img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
+.main-menu a:hover .selector {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-
-/* =========================
-   CARD INFO
-========================= */
-
-.card-info {
-    padding: 14px;
-}
-
-.card-info h3 {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.card-info span {
-    display: block;
-
-    margin-top: 3px;
-
-    color: #727b85;
-    font-size: 11px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    border-top: 1px solid #20242a;
-}
-
-.about p {
-    max-width: 600px;
-
-    color: #9da4ad;
-}
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 25px;
-
-    margin-top: 25px;
-}
-
-.socials a {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 14px;
-
-    border-bottom: 1px solid #555c65;
-
-    padding-bottom: 3px;
-}
-
-.socials a:hover {
-    border-color: #ffffff;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* Footer */
 
 footer {
-    width: 88%;
-    margin: 0 auto;
-
-    padding: 30px 0;
-
-    border-top: 1px solid #20242a;
-
-    color: #626a73;
-    font-size: 12px;
+    margin-top: 70px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: rgba(237, 246, 255, 0.4);
 }
 
+/* Mobile */
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    .header {
-        padding: 0 5%;
+@media (max-width: 600px) {
+    .logo {
+        margin-bottom: 55px;
     }
 
-    .nav {
-        gap: 15px;
+    .main-menu {
+        min-width: 210px;
+        gap: 20px;
     }
 
-    .nav a {
-        font-size: 12px;
+    .main-menu a {
+        font-size: 16px;
     }
 
-    .section {
-        padding: 80px 0;
+    footer {
+        margin-top: 55px;
     }
-
-    .character-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
 }
-
-
-@media (max-width: 480px) {
-
-    .header {
-        height: 60px;
-    }
-
-    .nav {
-        gap: 10px;
-    }
-
-    .nav a {
-        font-size: 11px;
-    }
-
-    .hero {
-        min-height: calc(100vh - 60px);
-    }
-
-    .character-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .card-info {
-        padding: 10px;
-    }
-
-    .card-info h3 {
-        font-size: 13px;
-    }
-
-}
+```
