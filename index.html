@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,40 +6,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="dex-3">
     <title>dex-3</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="menu">
+    <main class="site">
 
-        <header class="logo">
-            DEX-3
+        <!-- Logo -->
+        <header class="header">
+            <button class="logo" data-page="home">DEX-3</button>
         </header>
 
-        <nav class="main-menu" aria-label="Main menu">
-            <a href="character.html">
-                <span class="selector">&gt;</span>
-                CHARACTER
-            </a>
 
-            <a href="about.html">
-                <span class="selector">&gt;</span>
-                ABOUT
-            </a>
+        <!-- Main Menu -->
+        <nav class="menu" aria-label="Main menu">
 
-            <a href="presets.html">
-                <span class="selector">&gt;</span>
-                PRESETS
-            </a>
+            <button class="menu-item active" data-page="character">
+                <span class="arrow">&gt;</span>
+                <span>CHARACTER</span>
+            </button>
 
-            <a href="links.html">
-                <span class="selector">&gt;</span>
-                LINKS
-            </a>
+            <button class="menu-item" data-page="about">
+                <span class="arrow">&gt;</span>
+                <span>ABOUT</span>
+            </button>
+
+            <button class="menu-item" data-page="presets">
+                <span class="arrow">&gt;</span>
+                <span>PRESETS</span>
+            </button>
+
+            <button class="menu-item" data-page="links">
+                <span class="arrow">&gt;</span>
+                <span>LINKS</span>
+            </button>
+
         </nav>
 
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Home -->
+            <div class="page" id="home">
+                <p class="welcome">Welcome, Traveller.</p>
+            </div>
+
+
+            <!-- Character -->
+            <div class="page active-page" id="character">
+
+                <div class="page-heading">
+                    <span>CHARACTER</span>
+                    <small>26 ENTRIES</small>
+                </div>
+
+                <div class="character-list">
+
+                    <button>01 <span>RION ADACHI</span></button>
+                    <button>02 <span>AYAMI KARASUMA</span></button>
+                    <button>03 <span>ELSA VON RIETVELD</span></button>
+                    <button>04 <span>RAEDA BAXLEY</span></button>
+                    <button>05 <span>ALINA ENGEL</span></button>
+                    <button>06 <span>NOVA MELEDYNE</span></button>
+                    <button>07 <span>KIYOKO KARASU</span></button>
+                    <button>08 <span>YUZU IRUMI</span></button>
+                    <button>09 <span>RO-EUN YEONG</span></button>
+                    <button>10 <span>KOUKA ARISATO</span></button>
+                    <button>11 <span>CLAUDINE CELESTA</span></button>
+                    <button>12 <span>FIA ANDINI</span></button>
+                    <button>13 <span>FINLEY CAMELIA</span></button>
+                    <button>14 <span>YUME IZUMI</span></button>
+                    <button>15 <span>MILICA BELIC</span></button>
+                    <button>16 <span>JASMINE LAVENZA</span></button>
+                    <button>17 <span>MAYUMI INOUE</span></button>
+                    <button>18 <span>ETHYLN BERNARD</span></button>
+                    <button>19 <span>DIANE CEREZYNA TSOI</span></button>
+                    <button>20 <span>VERA ROCHESTER</span></button>
+                    <button>21 <span>KIRA MARINKA ORLOVA</span></button>
+                    <button>22 <span>NAOMI TAUSEND</span></button>
+                    <button>23 <span>EIMI SHIMIZU</span></button>
+                    <button>24 <span>LIN HUA YING</span></button>
+                    <button>25 <span>RANDALL GRAY</span></button>
+                    <button>26 <span>MAI HABARA</span></button>
+
+                </div>
+
+            </div>
+
+
+            <!-- About -->
+            <div class="page" id="about">
+
+                <div class="page-heading">
+                    <span>ABOUT</span>
+                </div>
+
+                <p class="text">
+                    A personal archive by dex-3.
+                </p>
+
+            </div>
+
+
+            <!-- Presets -->
+            <div class="page" id="presets">
+
+                <div class="page-heading">
+                    <span>PRESETS</span>
+                </div>
+
+                <a
+                    class="external-link"
+                    href="https://drive.google.com/drive/u/1/folders/1a80VVGi8gMLn3PPjYD0iPaKx3eGbpyL9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    &gt; OPEN PRESET ARCHIVE
+                </a>
+
+            </div>
+
+
+            <!-- Links -->
+            <div class="page" id="links">
+
+                <div class="page-heading">
+                    <span>LINKS</span>
+                </div>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://x.com/sorawindy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        &gt; X / TWITTER
+                    </a>
+
+                    <a
+                        href="https://www.pixiv.net/en/users/50033895"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        &gt; PIXIV
+                    </a>
+
+                    <a
+                        href="https://www.deviantart.com/dex-3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        &gt; DEVIANTART
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Status -->
+        <footer class="status">
+            SYSTEM READY
+        </footer>
+
     </main>
+
+
+    <script>
+        const menuItems = document.querySelectorAll(".menu-item");
+        const pages = document.querySelectorAll(".page");
+        const logo = document.querySelector(".logo");
+
+        function showPage(pageId) {
+            pages.forEach(page => {
+                page.classList.toggle(
+                    "active-page",
+                    page.id === pageId
+                );
+            });
+
+            menuItems.forEach(item => {
+                item.classList.toggle(
+                    "active",
+                    item.dataset.page === pageId
+                );
+            });
+        }
+
+        menuItems.forEach(item => {
+            item.addEventListener("click", () => {
+                showPage(item.dataset.page);
+            });
+        });
+
+        logo.addEventListener("click", () => {
+            showPage("home");
+        });
+    </script>
 
 </body>
 </html>
