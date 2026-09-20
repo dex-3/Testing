@@ -1,980 +1,251 @@
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600&display=swap");
-
-
-/* ------------------------------
-   Base
------------------------------- */
-
 * {
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
+    margin: 0;
     min-height: 100%;
 }
 
 body {
-    margin: 0;
+    background: #050505;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+main {
     min-height: 100vh;
-
-    background: #03060a;
-    color: #edf6ff;
-
-    font-family: "Oxanium", sans-serif;
-    font-weight: 400;
-}
-
-
-/* ------------------------------
-   Layout
------------------------------- */
-
-.site {
-    position: relative;
-    min-height: 100vh;
-
-    padding: 32px 40px;
-}
-
-
-/* ------------------------------
-   Header / Logo
------------------------------- */
-
-.header {
-    margin: 0;
-}
-
-.logo {
-    padding: 0;
-
-    border: 0;
-    background: none;
-
-    color: #edf6ff;
-
-    font-family: inherit;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-
-    cursor: pointer;
-}
-
-.logo:hover {
-    color: #8fd0ff;
-}
-
-
-/* ------------------------------
-   Main Menu
------------------------------- */
-
-.menu {
-    display: flex;
-    flex-direction: column;
-
-    width: 220px;
-
-    margin-top: 42px;
-
-    gap: 12px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-
-    width: max-content;
-
-    padding: 2px 0;
-
-    border: 0;
-    background: none;
-
-    color: rgba(237, 246, 255, 0.55);
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-
-    cursor: pointer;
-
-    transition:
-        color 0.15s ease,
-        transform 0.15s ease;
-}
-
-.menu-item .arrow {
-    display: inline-block;
-
-    width: 20px;
-
-    opacity: 0;
-    transform: translateX(-5px);
-
-    transition:
-        opacity 0.15s ease,
-        transform 0.15s ease;
-}
-
-.menu-item:hover,
-.menu-item.active {
-    color: #edf6ff;
-    transform: translateX(4px);
-}
-
-.menu-item:hover .arrow,
-.menu-item.active .arrow {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-/* ------------------------------
-   Content
------------------------------- */
-
-.content {
-    position: absolute;
-
-    top: 32px;
-    left: 340px;
-    right: 40px;
-
-    min-height: calc(100vh - 64px);
+    padding: 40px;
 }
 
 .page {
     display: none;
 }
 
-.active-page {
+.page.active {
     display: block;
 }
 
 
-/* ------------------------------
-   Home
------------------------------- */
+/* HOME */
 
-.welcome {
-    margin: 80px 0 0;
-
-    color: rgba(237, 246, 255, 0.65);
-
-    font-size: 14px;
-    letter-spacing: 0.08em;
+#home {
+    padding-top: 20px;
 }
 
+h1 {
+    margin: 0 0 35px;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+}
 
-/* ------------------------------
-   Page Heading
------------------------------- */
-
-.page-heading {
+nav {
     display: flex;
-    align-items: baseline;
-    gap: 18px;
-
-    margin-bottom: 28px;
-
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
 }
 
-.page-heading small {
-    color: rgba(237, 246, 255, 0.3);
+button,
+a {
+    font: inherit;
+}
 
-    font-size: 9px;
+nav button,
+.back,
+.links a,
+#presets a {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #888888;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav button::before {
+    content: " ";
+    display: inline-block;
+    width: 16px;
+}
+
+nav button:hover,
+.links a:hover,
+#presets a:hover,
+.back:hover {
+    color: #ffffff;
+}
+
+nav button:hover::before {
+    content: ">";
+}
+
+
+/* GENERAL PAGES */
+
+h2 {
+    margin: 0 0 30px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.12em;
 }
 
-
-/* ------------------------------
-   Character List
------------------------------- */
-
-.character-list {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(250px, 400px));
-
-    column-gap: 70px;
-    row-gap: 6px;
-}
-
-.character-list button {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-
-    padding: 4px 0;
-
-    border: 0;
-    background: none;
-
-    color: rgba(237, 246, 255, 0.38);
-
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    transition:
-        color 0.15s ease,
-        transform 0.15s ease;
-}
-
-.character-list button span {
-    margin-left: 18px;
-
-    color: #edf6ff;
-}
-
-.character-list button:hover {
-    color: #8fd0ff;
-    transform: translateX(5px);
-}
-
-.character-list button:hover span {
-    color: #8fd0ff;
+.back {
+    display: block;
+    margin-bottom: 35px;
+    color: #666666;
 }
 
 
-/* ------------------------------
-   About
------------------------------- */
-
-.text {
-    max-width: 500px;
-
-    margin: 0;
-
-    color: rgba(237, 246, 255, 0.55);
-
-    font-size: 13px;
-    line-height: 1.8;
-    letter-spacing: 0.04em;
-}
-
-```css
-/* ------------------------------
-   Character Selection
------------------------------- */
+/* CHARACTER GRID */
 
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(6, 110px);
+    grid-template-columns: repeat(6, 100px);
     gap: 10px;
 }
 
-.character-thumb {
-    width: 110px;
-    aspect-ratio: 9 / 12;
-    padding: 0;
-    border: 0;
-    background: none;
-    overflow: hidden;
-}
-
-.character-thumb img {
-    width: 100%;
-    height: 100%;
+.character {
     display: block;
-    object-fit: cover;
-}
-
-.character-thumb::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    border: 1px solid transparent;
-
-    transition: border-color 0.15s ease;
-}
-
-.character-thumb:hover img {
-    transform: scale(1.04);
-    opacity: 0.8;
-}
-
-.character-thumb:hover::after {
-    border-color: #8fd0ff;
-}
-
-
-/* ------------------------------
-   Character Profile
------------------------------- */
-
-.character-profile {
-    display: none;
-
-    position: relative;
-
-    max-width: 850px;
-}
-
-.character-profile.open {
-    display: grid;
-
-    grid-template-columns: 280px 1fr;
-    gap: 45px;
-
-    align-items: start;
-}
-
-.profile-back {
-    position: absolute;
-
-    top: -45px;
-    left: 0;
-
+    width: 100px;
+    height: 133px;
     padding: 0;
-
     border: 0;
-    background: none;
-
-    color: rgba(237, 246, 255, 0.45);
-
-    font-family: inherit;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-
+    background: #111111;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.profile-back:hover {
-    color: #8fd0ff;
-}
-
-
-.profile-image {
-    width: 280px;
-    aspect-ratio: 9 / 12;
-
-    background: #080d13;
-    overflow: hidden;
-}
-
-.profile-image img {
+.character img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
-
-.profile-info {
-    padding-top: 10px;
+.character:hover {
+    opacity: 0.7;
 }
 
-.profile-number {
-    margin-bottom: 8px;
 
-    color: rgba(237, 246, 255, 0.3);
+/* PROFILE */
 
+.profile {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    max-width: 700px;
+}
+
+.profile > img {
+    display: block;
+    width: 260px;
+    height: 347px;
+    object-fit: cover;
+}
+
+#profile-number {
+    margin: 0 0 8px;
+    color: #555555;
     font-size: 10px;
     letter-spacing: 0.15em;
 }
 
-.profile-info h2 {
-    margin: 0 0 35px;
-
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-}
-
-
-.profile-data {
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-
+#profile-name {
     margin-bottom: 35px;
 }
 
-.profile-data div {
-    display: flex;
-    flex-direction: column;
-
-    gap: 4px;
+dl {
+    margin: 0 0 30px;
 }
 
-.profile-data span {
-    color: rgba(237, 246, 255, 0.3);
+dl div {
+    margin-bottom: 14px;
+}
 
+dt {
+    margin-bottom: 4px;
+    color: #555555;
     font-size: 9px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
 }
 
-.profile-data strong {
-    color: #edf6ff;
-
+dd {
+    margin: 0;
     font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.06em;
 }
-
 
 #profile-bio {
-    max-width: 450px;
-
+    max-width: 400px;
     margin: 0;
-
-    color: rgba(237, 246, 255, 0.55);
-
+    color: #777777;
     font-size: 12px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
+    line-height: 1.7;
 }
 
 
-/* ------------------------------
-   Mobile
------------------------------- */
+/* ABOUT */
 
-@media (max-width: 900px) {
-
-    .character-grid {
-        grid-template-columns:
-            repeat(4, minmax(90px, 1fr));
-    }
-
-    .character-profile.open {
-        grid-template-columns: 220px 1fr;
-        gap: 30px;
-    }
-
-    .profile-image {
-        width: 220px;
-    }
+#about p {
+    max-width: 400px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 
-@media (max-width: 650px) {
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    main {
+        padding: 25px;
+    }
 
     .character-grid {
-        grid-template-columns:
-            repeat(3, minmax(80px, 1fr));
+        grid-template-columns: repeat(4, 90px);
+    }
 
+    .character {
+        width: 90px;
+        height: 120px;
+    }
+
+    .profile {
+        grid-template-columns: 200px 1fr;
+        gap: 25px;
+    }
+
+    .profile > img {
+        width: 200px;
+        height: 267px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .character-grid {
+        grid-template-columns: repeat(3, 85px);
         gap: 8px;
     }
 
-    .character-profile.open {
+    .character {
+        width: 85px;
+        height: 113px;
+    }
+
+    .profile {
         grid-template-columns: 1fr;
     }
 
-    .profile-image {
-        width: min(260px, 100%);
-    }
-
-    .profile-info {
-        padding-top: 0;
+    .profile > img {
+        width: 200px;
+        height: 267px;
     }
 }
-```
-
-
-/* ------------------------------
-   Links
------------------------------- */
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-
-    gap: 12px;
-}
-
-.external-link,
-.social-links a {
-    display: block;
-
-    width: max-content;
-
-    color: rgba(237, 246, 255, 0.65);
-
-    text-decoration: none;
-
-    font-size: 12px;
-    letter-spacing: 0.08em;
-
-    transition:
-        color 0.15s ease,
-        transform 0.15s ease;
-}
-
-.external-link:hover,
-.social-links a:hover {
-    color: #8fd0ff;
-    transform: translateX(5px);
-}
-
-
-/* ------------------------------
-   Status
------------------------------- */
-
-.status {
-    position: fixed;
-
-    right: 40px;
-    bottom: 25px;
-
-    color: rgba(237, 246, 255, 0.25);
-
-    font-size: 9px;
-    letter-spacing: 0.18em;
-}
-
-
-/* ------------------------------
-   Mobile
------------------------------- */
-
-@media (max-width: 800px) {
-
-    .site {
-        padding: 25px 24px;
-    }
-
-    .content {
-        position: static;
-
-        margin-top: 60px;
-
-        min-height: 0;
-    }
-
-    .character-list {
-        grid-template-columns: 1fr;
-
-        column-gap: 0;
-    }
-
-    .status {
-        right: 24px;
-        bottom: 20px;
-    }
-}
-```
-
-```html
-<script>
-    const menuItems = document.querySelectorAll(".menu-item");
-    const pages = document.querySelectorAll(".page");
-    const logo = document.querySelector(".logo");
-
-    const characterSelect =
-        document.querySelector(".character-select");
-
-    const characterProfile =
-        document.querySelector(".character-profile");
-
-    const profileBack =
-        document.querySelector("#profile-back");
-
-    const profileImage =
-        document.querySelector("#profile-image");
-
-    const profileNumber =
-        document.querySelector("#profile-number");
-
-    const profileName =
-        document.querySelector("#profile-name");
-
-    const profileAge =
-        document.querySelector("#profile-age");
-
-    const profileNationality =
-        document.querySelector("#profile-nationality");
-
-    const profileType =
-        document.querySelector("#profile-type");
-
-    const profileBio =
-        document.querySelector("#profile-bio");
-
-
-    const characters = {
-
-        rion: {
-            number: "01",
-            name: "RION ADACHI",
-            image: "images/rion-adachi.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A straightforward woman who takes on life with an optimistic spirit."
-        },
-
-        ayami: {
-            number: "02",
-            name: "AYAMI KARASUMA",
-            image: "images/ayami-karasuma.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A calm and private investigator who prefers observing before acting."
-        },
-
-        elsa: {
-            number: "03",
-            name: "ELSA VON RIETVELD",
-            image: "images/elsa-von-rietveld.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A former army member who found a new life behind the wheel."
-        },
-
-        raeda: {
-            number: "04",
-            name: "RAEDA BAXLEY",
-            image: "images/raeda-baxley.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman with her own way of navigating the world."
-        },
-
-        alina: {
-            number: "05",
-            name: "ALINA ENGEL",
-            image: "images/alina-engel.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A perfectionist business owner who constantly pushes herself forward."
-        },
-
-        nova: {
-            number: "06",
-            name: "NOVA MELEDYNE",
-            image: "images/nova-meledyne.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A researcher whose curiosity keeps her constantly searching for answers."
-        },
-
-        kiyoko: {
-            number: "07",
-            name: "KIYOKO KARASU",
-            image: "images/kiyoko-karasu.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A princess from another era adapting to an unfamiliar modern world."
-        },
-
-        yuzu: {
-            number: "08",
-            name: "YUZU IRUMI",
-            image: "images/yuzu-irumi.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A timid shrine maiden with a quiet and gentle presence."
-        },
-
-        roeun: {
-            number: "09",
-            name: "RO-EUN YEONG",
-            image: "images/ro-eun-yeong.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman with a story that is still waiting to be uncovered."
-        },
-
-        kouka: {
-            number: "10",
-            name: "KOUKA ARISATO",
-            image: "images/kouka-arisato.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "Someone who follows her own path regardless of where it leads."
-        },
-
-        claudine: {
-            number: "11",
-            name: "CLAUDINE CELESTA",
-            image: "images/claudine-celesta.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A journalist always looking for the next story worth telling."
-        },
-
-        fia: {
-            number: "12",
-            name: "FIA ANDINI",
-            image: "images/fia-andini.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman with a personality all her own."
-        },
-
-        finley: {
-            number: "13",
-            name: "FINLEY CAMELIA",
-            image: "images/finley-camelia.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A streamer whose life naturally unfolds in front of an audience."
-        },
-
-        yume: {
-            number: "14",
-            name: "YUME IZUMI",
-            image: "images/yume-izumi.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman whose everyday life hides more than first impressions suggest."
-        },
-
-        milica: {
-            number: "15",
-            name: "MILICA BELIC",
-            image: "images/milica-belic.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A cosplayer and chemist balancing creativity with scientific curiosity."
-        },
-
-        jasmine: {
-            number: "16",
-            name: "JASMINE LAVENZA",
-            image: "images/jasmine-lavenza.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman with a distinctive presence and her own ambitions."
-        },
-
-        mayumi: {
-            number: "17",
-            name: "MAYUMI INOUE",
-            image: "images/mayumi-inoue.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A model who spends her free time chasing speed on the streets."
-        },
-
-        ethyln: {
-            number: "18",
-            name: "ETHYLN BERNARD",
-            image: "images/ethyln-bernard.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A café owner who knows her way around both coffee and customers."
-        },
-
-        diane: {
-            number: "19",
-            name: "DIANE CEREZYNA TSOI",
-            image: "images/diane-cerezyna-tsoi.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A former military member who now spends her days making deliveries."
-        },
-
-        vera: {
-            number: "20",
-            name: "VERA ROCHESTER",
-            image: "images/vera-rochester.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A woman who has left her rougher past behind and built a new life."
-        },
-
-        kira: {
-            number: "21",
-            name: "KIRA MARINKA ORLOVA",
-            image: "images/kira-marinka-orlova.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "An experienced office worker with a life beyond the daily routine."
-        },
-
-        naomi: {
-            number: "22",
-            name: "NAOMI TAUSEND",
-            image: "images/naomi-tausend.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A confident woman who makes a living dealing in used cars."
-        },
-
-        eimi: {
-            number: "23",
-            name: "EIMI SHIMIZU",
-            image: "images/eimi-shimizu.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A street artist who leaves her mark wherever inspiration takes her."
-        },
-
-        lin: {
-            number: "24",
-            name: "LIN HUA YING",
-            image: "images/lin-hua-ying.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A market owner who knows the people and rhythms of her neighborhood."
-        },
-
-        randall: {
-            number: "25",
-            name: "RANDALL GRAY",
-            image: "images/randall-gray.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A firefighter accustomed to stepping forward when others need help."
-        },
-
-        mai: {
-            number: "26",
-            name: "MAI HABARA",
-            image: "images/mai-habara.webp",
-            age: "—",
-            nationality: "—",
-            type: "—",
-            bio: "A self-employed woman who values doing things on her own terms."
-        }
-
-    };
-
-
-    /* Main menu */
-
-    function showPage(pageId) {
-
-        pages.forEach(page => {
-            page.classList.toggle(
-                "active-page",
-                page.id === pageId
-            );
-        });
-
-        menuItems.forEach(item => {
-            item.classList.toggle(
-                "active",
-                item.dataset.page === pageId
-            );
-        });
-
-        if (pageId === "character") {
-            closeProfile();
-        }
-    }
-
-
-    menuItems.forEach(item => {
-
-        item.addEventListener("click", () => {
-            showPage(item.dataset.page);
-        });
-
-    });
-
-
-    logo.addEventListener("click", () => {
-        showPage("home");
-    });
-
-
-    /* Character profile */
-
-    document.querySelectorAll(".character-thumb")
-        .forEach(thumb => {
-
-            thumb.addEventListener("click", () => {
-
-                const character =
-                    characters[thumb.dataset.character];
-
-                if (!character) return;
-
-                profileNumber.textContent =
-                    character.number;
-
-                profileName.textContent =
-                    character.name;
-
-                profileAge.textContent =
-                    character.age;
-
-                profileNationality.textContent =
-                    character.nationality;
-
-                profileType.textContent =
-                    character.type;
-
-                profileBio.textContent =
-                    character.bio;
-
-                profileImage.src =
-                    character.image;
-
-                profileImage.alt =
-                    character.name;
-
-                characterSelect.style.display =
-                    "none";
-
-                characterProfile.classList.add("open");
-
-            });
-
-        });
-
-
-    /* Back to character grid */
-
-    function closeProfile() {
-
-        characterProfile.classList.remove("open");
-
-        characterSelect.style.display =
-            "block";
-
-    }
-
-
-    profileBack.addEventListener("click", closeProfile);
-</script>
 ```
