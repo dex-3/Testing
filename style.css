@@ -20,21 +20,15 @@ body {
 
 .menu {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+    padding: 32px 40px;
 }
-
 /* Logo */
 
 .logo {
-    font-size: clamp(42px, 7vw, 76px);
+    font-size: 24px;
     font-weight: 600;
-    letter-spacing: 0.25em;
-    margin-left: 0.25em;
-    margin-bottom: 70px;
+    letter-spacing: 0.18em;
+    margin: 0 0 45px 0;
 }
 
 /* Main menu */
@@ -42,17 +36,17 @@ body {
 .main-menu {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    min-width: 240px;
+    gap: 16px;
+    width: 220px;
 }
 
 .main-menu a {
     position: relative;
     display: block;
-    padding: 5px 0;
+    padding: 3px 0;
     color: #edf6ff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.12em;
     transition: color 0.15s ease,
@@ -61,16 +55,16 @@ body {
 
 .selector {
     display: inline-block;
-    width: 24px;
+    width: 20px;
     opacity: 0;
-    transform: translateX(-8px);
+    transform: translateX(-6px);
     transition: opacity 0.15s ease,
                 transform 0.15s ease;
 }
 
 .main-menu a:hover {
     color: #8fd0ff;
-    transform: translateX(6px);
+    transform: translateX(5px);
 }
 
 .main-menu a:hover .selector {
@@ -78,14 +72,14 @@ body {
     transform: translateX(0);
 }
 
-/* Footer */
-
 footer {
-    margin-top: 70px;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    color: rgba(237, 246, 255, 0.4);
+    position: absolute;
+    bottom: 25px;
+    left: 40px;
+
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: rgba(237, 246, 255, 0.35);
 }
 
 /* Mobile */
