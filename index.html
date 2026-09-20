@@ -3,337 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="dex-3">
     <title>dex-3</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="site">
+    <main>
 
-        <!-- Logo -->
-        <header class="header">
-            <button class="logo" data-page="home">DEX-3</button>
-        </header>
+        <!-- HOME -->
+        <section id="home" class="page active">
+            <h1>DEX-3</h1>
 
-
-        <!-- Main Menu -->
-        <nav class="menu" aria-label="Main menu">
-
-            <button class="menu-item active" data-page="character">
-                <span class="arrow">&gt;</span>
-                <span>CHARACTER</span>
-            </button>
-
-            <button class="menu-item" data-page="about">
-                <span class="arrow">&gt;</span>
-                <span>ABOUT</span>
-            </button>
-
-            <button class="menu-item" data-page="presets">
-                <span class="arrow">&gt;</span>
-                <span>PRESETS</span>
-            </button>
-
-            <button class="menu-item" data-page="links">
-                <span class="arrow">&gt;</span>
-                <span>LINKS</span>
-            </button>
-
-        </nav>
+            <nav>
+                <button data-page="character">CHARACTER</button>
+                <button data-page="about">ABOUT</button>
+                <button data-page="presets">PRESETS</button>
+                <button data-page="links">LINKS</button>
+            </nav>
+        </section>
 
 
-        <!-- Content -->
-        <section class="content">
+        <!-- CHARACTER -->
+        <section id="character" class="page">
 
-            <!-- Home -->
-            <div class="page" id="home">
-                <p class="welcome">Welcome, Traveller.</p>
+            <button class="back" data-page="home">&lt; BACK</button>
+
+            <h2>CHARACTER</h2>
+
+            <div class="character-grid">
+
+                <button class="character" data-id="rion">
+                    <img src="images/rion-adachi.webp" alt="Rion Adachi">
+                </button>
+
+                <button class="character" data-id="ayami">
+                    <img src="images/ayami-karasuma.webp" alt="Ayami Karasuma">
+                </button>
+
+                <button class="character" data-id="elsa">
+                    <img src="images/elsa-von-rietveld.webp" alt="Elsa von Rietveld">
+                </button>
+
+                <button class="character" data-id="raeda">
+                    <img src="images/raeda-baxley.webp" alt="Raeda Baxley">
+                </button>
+
+                <button class="character" data-id="alina">
+                    <img src="images/alina-engel.webp" alt="Alina Engel">
+                </button>
+
+                <button class="character" data-id="nova">
+                    <img src="images/nova-meledyne.webp" alt="Nova Meledyne">
+                </button>
+
+                <button class="character" data-id="kiyoko">
+                    <img src="images/kiyoko-karasu.webp" alt="Kiyoko Karasu">
+                </button>
+
+                <button class="character" data-id="yuzu">
+                    <img src="images/yuzu-irumi.webp" alt="Yuzu Irumi">
+                </button>
+
+                <button class="character" data-id="roeun">
+                    <img src="images/ro-eun-yeong.webp" alt="Ro-Eun Yeong">
+                </button>
+
+                <button class="character" data-id="kouka">
+                    <img src="images/kouka-arisato.webp" alt="Kouka Arisato">
+                </button>
+
+                <button class="character" data-id="claudine">
+                    <img src="images/claudine-celesta.webp" alt="Claudine Celesta">
+                </button>
+
+                <button class="character" data-id="fia">
+                    <img src="images/fia-andini.webp" alt="Fia Andini">
+                </button>
+
+                <button class="character" data-id="finley">
+                    <img src="images/finley-camelia.webp" alt="Finley Camelia">
+                </button>
+
+                <button class="character" data-id="yume">
+                    <img src="images/yume-izumi.webp" alt="Yume Izumi">
+                </button>
+
+                <button class="character" data-id="milica">
+                    <img src="images/milica-belic.webp" alt="Milica Belic">
+                </button>
+
+                <button class="character" data-id="jasmine">
+                    <img src="images/jasmine-lavenza.webp" alt="Jasmine Lavenza">
+                </button>
+
+                <button class="character" data-id="mayumi">
+                    <img src="images/mayumi-inoue.webp" alt="Mayumi Inoue">
+                </button>
+
+                <button class="character" data-id="ethyln">
+                    <img src="images/ethyln-bernard.webp" alt="Ethyln Bernard">
+                </button>
+
+                <button class="character" data-id="diane">
+                    <img src="images/diane-cerezyna-tsoi.webp" alt="Diane Cerezyna Tsoi">
+                </button>
+
+                <button class="character" data-id="vera">
+                    <img src="images/vera-rochester.webp" alt="Vera Rochester">
+                </button>
+
+                <button class="character" data-id="kira">
+                    <img src="images/kira-marinka-orlova.webp" alt="Kira Marinka Orlova">
+                </button>
+
+                <button class="character" data-id="naomi">
+                    <img src="images/naomi-tausend.webp" alt="Naomi Tausend">
+                </button>
+
+                <button class="character" data-id="eimi">
+                    <img src="images/eimi-shimizu.webp" alt="Eimi Shimizu">
+                </button>
+
+                <button class="character" data-id="lin">
+                    <img src="images/lin-hua-ying.webp" alt="Lin Hua Ying">
+                </button>
+
+                <button class="character" data-id="randall">
+                    <img src="images/randall-gray.webp" alt="Randall Gray">
+                </button>
+
+                <button class="character" data-id="mai">
+                    <img src="images/mai-habara.webp" alt="Mai Habara">
+                </button>
+
             </div>
+        </section>
 
 
-         
-<!-- Character -->
-<div class="page active-page" id="character">
+        <!-- PROFILE -->
+        <section id="profile" class="page">
 
-    <!-- Character Selection -->
-    <div class="character-select">
+            <button class="back" data-page="character">&lt; BACK</button>
 
-        <div class="page-heading">
-            <span>CHARACTER</span>
-            <small>SELECT CHARACTER</small>
-        </div>
+            <div class="profile">
 
-        <div class="character-grid">
-
-            <button class="character-thumb" data-character="rion">
-                <img src="images/rion-adachi.webp" alt="Rion Adachi">
-            </button>
-
-            <button class="character-thumb" data-character="ayami">
-                <img src="images/ayami-karasuma.webp" alt="Ayami Karasuma">
-            </button>
-
-            <button class="character-thumb" data-character="elsa">
-                <img src="images/elsa-von-rietveld.webp" alt="Elsa von Rietveld">
-            </button>
-
-            <button class="character-thumb" data-character="raeda">
-                <img src="images/raeda-baxley.webp" alt="Raeda Baxley">
-            </button>
-
-            <button class="character-thumb" data-character="alina">
-                <img src="images/alina-engel.webp" alt="Alina Engel">
-            </button>
-
-            <button class="character-thumb" data-character="nova">
-                <img src="images/nova-meledyne.webp" alt="Nova Meledyne">
-            </button>
-
-            <button class="character-thumb" data-character="kiyoko">
-                <img src="images/kiyoko-karasu.webp" alt="Kiyoko Karasu">
-            </button>
-
-            <button class="character-thumb" data-character="yuzu">
-                <img src="images/yuzu-irumi.webp" alt="Yuzu Irumi">
-            </button>
-
-            <button class="character-thumb" data-character="roeun">
-                <img src="images/ro-eun-yeong.webp" alt="Ro-Eun Yeong">
-            </button>
-
-            <button class="character-thumb" data-character="kouka">
-                <img src="images/kouka-arisato.webp" alt="Kouka Arisato">
-            </button>
-
-            <button class="character-thumb" data-character="claudine">
-                <img src="images/claudine-celesta.webp" alt="Claudine Celesta">
-            </button>
-
-            <button class="character-thumb" data-character="fia">
-                <img src="images/fia-andini.webp" alt="Fia Andini">
-            </button>
-
-            <button class="character-thumb" data-character="finley">
-                <img src="images/finley-camelia.webp" alt="Finley Camelia">
-            </button>
-
-            <button class="character-thumb" data-character="yume">
-                <img src="images/yume-izumi.webp" alt="Yume Izumi">
-            </button>
-
-            <button class="character-thumb" data-character="milica">
-                <img src="images/milica-belic.webp" alt="Milica Belic">
-            </button>
-
-            <button class="character-thumb" data-character="jasmine">
-                <img src="images/jasmine-lavenza.webp" alt="Jasmine Lavenza">
-            </button>
-
-            <button class="character-thumb" data-character="mayumi">
-                <img src="images/mayumi-inoue.webp" alt="Mayumi Inoue">
-            </button>
-
-            <button class="character-thumb" data-character="ethyln">
-                <img src="images/ethyln-bernard.webp" alt="Ethlyn Bernard">
-            </button>
-
-            <button class="character-thumb" data-character="diane">
-                <img src="images/diane-cerezyna-tsoi.webp" alt="Diane Cerezyna Tsoi">
-            </button>
-
-            <button class="character-thumb" data-character="vera">
-                <img src="images/vera-rochester.webp" alt="Vera Rochester">
-            </button>
-
-            <button class="character-thumb" data-character="kira">
-                <img src="images/kira-marinka-orlova.webp" alt="Kira Marinka Orlova">
-            </button>
-
-            <button class="character-thumb" data-character="naomi">
-                <img src="images/naomi-tausend.webp" alt="Naomi Tausend">
-            </button>
-
-            <button class="character-thumb" data-character="eimi">
-                <img src="images/eimi-shimizu.webp" alt="Eimi Shimizu">
-            </button>
-
-            <button class="character-thumb" data-character="lin">
-                <img src="images/lin-hua-ying.webp" alt="Lin Hua Ying">
-            </button>
-
-            <button class="character-thumb" data-character="randall">
-                <img src="images/randall-gray.webp" alt="Randall Gray">
-            </button>
-
-            <button class="character-thumb" data-character="mai">
-                <img src="images/mai-habara.webp" alt="Mai Habara">
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- Character Profile -->
-    <div class="character-profile" id="character-profile">
-
-        <button class="profile-back" id="profile-back">
-            &lt; BACK
-        </button>
-
-        <div class="profile-image">
-            <img id="profile-image" src="" alt="">
-        </div>
-
-        <div class="profile-info">
-
-            <div class="profile-number" id="profile-number">
-                01
-            </div>
-
-            <h2 id="profile-name">
-                RION ADACHI
-            </h2>
-
-            <div class="profile-data">
+                <img id="profile-image" src="" alt="">
 
                 <div>
-                    <span>AGE</span>
-                    <strong id="profile-age">—</strong>
-                </div>
+                    <p id="profile-number"></p>
+                    <h2 id="profile-name"></h2>
 
-                <div>
-                    <span>NATIONALITY</span>
-                    <strong id="profile-nationality">—</strong>
-                </div>
+                    <dl>
+                        <div>
+                            <dt>AGE</dt>
+                            <dd id="profile-age">—</dd>
+                        </div>
 
-                <div>
-                    <span>TYPE</span>
-                    <strong id="profile-type">—</strong>
-                </div>
+                        <div>
+                            <dt>NATIONALITY</dt>
+                            <dd id="profile-nationality">—</dd>
+                        </div>
 
-            </div>
+                        <div>
+                            <dt>TYPE</dt>
+                            <dd id="profile-type">—</dd>
+                        </div>
+                    </dl>
 
-            <p id="profile-bio">
-                Select a character to view their profile.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-            <!-- About -->
-            <div class="page" id="about">
-
-                <div class="page-heading">
-                    <span>ABOUT</span>
-                </div>
-
-                <p class="text">
-                    A personal archive by dex-3.
-                </p>
-
-            </div>
-
-
-            <!-- Presets -->
-            <div class="page" id="presets">
-
-                <div class="page-heading">
-                    <span>PRESETS</span>
-                </div>
-
-                <a
-                    class="external-link"
-                    href="https://drive.google.com/drive/u/1/folders/1a80VVGi8gMLn3PPjYD0iPaKx3eGbpyL9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    &gt; OPEN PRESET ARCHIVE
-                </a>
-
-            </div>
-
-
-            <!-- Links -->
-            <div class="page" id="links">
-
-                <div class="page-heading">
-                    <span>LINKS</span>
-                </div>
-
-                <div class="social-links">
-
-                    <a
-                        href="https://x.com/sorawindy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        &gt; X / TWITTER
-                    </a>
-
-                    <a
-                        href="https://www.pixiv.net/en/users/50033895"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        &gt; PIXIV
-                    </a>
-
-                    <a
-                        href="https://www.deviantart.com/dex-3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        &gt; DEVIANTART
-                    </a>
-
+                    <p id="profile-bio"></p>
                 </div>
 
             </div>
+        </section>
 
+
+        <!-- ABOUT -->
+        <section id="about" class="page">
+            <button class="back" data-page="home">&lt; BACK</button>
+            <h2>ABOUT</h2>
+            <p>Personal archive and character collection by DEX-3.</p>
+        </section>
+
+
+        <!-- PRESETS -->
+        <section id="presets" class="page">
+            <button class="back" data-page="home">&lt; BACK</button>
+            <h2>PRESETS</h2>
+            <a href="https://drive.google.com/drive/u/1/folders/1a80VVGi8gMLn3PPjYD0iPaKx3eGbpyL9"
+               target="_blank"
+               rel="noopener">
+                OPEN DRIVE
+            </a>
+        </section>
+
+
+        <!-- LINKS -->
+        <section id="links" class="page">
+            <button class="back" data-page="home">&lt; BACK</button>
+            <h2>LINKS</h2>
+
+            <nav class="links">
+                <a href="https://x.com/sorawindy" target="_blank" rel="noopener">X</a>
+                <a href="https://www.pixiv.net/en/users/50033895" target="_blank" rel="noopener">PIXIV</a>
+                <a href="https://www.deviantart.com/dex-3" target="_blank" rel="noopener">DEVIANTART</a>
+            </nav>
         </section>
 
     </main>
 
 
     <script>
-        const menuItems = document.querySelectorAll(".menu-item");
         const pages = document.querySelectorAll(".page");
-        const logo = document.querySelector(".logo");
+        const pageButtons = document.querySelectorAll("[data-page]");
 
-        function showPage(pageId) {
+        const characters = {
+            rion: {
+                number: "01",
+                name: "RION ADACHI",
+                image: "images/rion-adachi.webp",
+                bio: "A straightforward woman who takes on life with an optimistic spirit."
+            },
+            ayami: {
+                number: "02",
+                name: "AYAMI KARASUMA",
+                image: "images/ayami-karasuma.webp",
+                bio: "A calm and private investigator who prefers observing before acting."
+            },
+            elsa: {
+                number: "03",
+                name: "ELSA VON RIETVELD",
+                image: "images/elsa-von-rietveld.webp",
+                bio: "A former army member who found a new life behind the wheel."
+            },
+            raeda: {
+                number: "04",
+                name: "RAEDA BAXLEY",
+                image: "images/raeda-baxley.webp",
+                bio: "A woman with her own way of navigating the world."
+            },
+            alina: {
+                number: "05",
+                name: "ALINA ENGEL",
+                image: "images/alina-engel.webp",
+                bio: "A perfectionist business owner who constantly pushes herself forward."
+            },
+            nova: {
+                number: "06",
+                name: "NOVA MELEDYNE",
+                image: "images/nova-meledyne.webp",
+                bio: "A researcher whose curiosity keeps her constantly searching for answers."
+            },
+            kiyoko: {
+                number: "07",
+                name: "KIYOKO KARASU",
+                image: "images/kiyoko-karasu.webp",
+                bio: "A princess from another era adapting to an unfamiliar modern world."
+            },
+            yuzu: {
+                number: "08",
+                name: "YUZU IRUMI",
+                image: "images/yuzu-irumi.webp",
+                bio: "A timid shrine maiden with a quiet and gentle presence."
+            },
+            roeun: {
+                number: "09",
+                name: "RO-EUN YEONG",
+                image: "images/ro-eun-yeong.webp",
+                bio: "A woman with a story that is still waiting to be uncovered."
+            },
+            kouka: {
+                number: "10",
+                name: "KOUKA ARISATO",
+                image: "images/kouka-arisato.webp",
+                bio: "Someone who follows her own path regardless of where it leads."
+            },
+            claudine: {
+                number: "11",
+                name: "CLAUDINE CELESTA",
+                image: "images/claudine-celesta.webp",
+                bio: "A journalist always looking for the next story worth telling."
+            },
+            fia: {
+                number: "12",
+                name: "FIA ANDINI",
+                image: "images/fia-andini.webp",
+                bio: "A woman with a personality all her own."
+            },
+            finley: {
+                number: "13",
+                name: "FINLEY CAMELIA",
+                image: "images/finley-camelia.webp",
+                bio: "A streamer whose life naturally unfolds in front of an audience."
+            },
+            yume: {
+                number: "14",
+                name: "YUME IZUMI",
+                image: "images/yume-izumi.webp",
+                bio: "A woman whose everyday life hides more than first impressions suggest."
+            },
+            milica: {
+                number: "15",
+                name: "MILICA BELIC",
+                image: "images/milica-belic.webp",
+                bio: "A cosplayer and chemist balancing creativity with scientific curiosity."
+            },
+            jasmine: {
+                number: "16",
+                name: "JASMINE LAVENZA",
+                image: "images/jasmine-lavenza.webp",
+                bio: "A woman with a distinctive presence and her own ambitions."
+            },
+            mayumi: {
+                number: "17",
+                name: "MAYUMI INOUE",
+                image: "images/mayumi-inoue.webp",
+                bio: "A model who spends her free time chasing speed on the streets."
+            },
+            ethyln: {
+                number: "18",
+                name: "ETHYLN BERNARD",
+                image: "images/ethyln-bernard.webp",
+                bio: "A café owner who knows her way around both coffee and customers."
+            },
+            diane: {
+                number: "19",
+                name: "DIANE CEREZYNA TSOI",
+                image: "images/diane-cerezyna-tsoi.webp",
+                bio: "A former military member who now spends her days making deliveries."
+            },
+            vera: {
+                number: "20",
+                name: "VERA ROCHESTER",
+                image: "images/vera-rochester.webp",
+                bio: "A woman who has left her rougher past behind and built a new life."
+            },
+            kira: {
+                number: "21",
+                name: "KIRA MARINKA ORLOVA",
+                image: "images/kira-marinka-orlova.webp",
+                bio: "An experienced office worker with a life beyond the daily routine."
+            },
+            naomi: {
+                number: "22",
+                name: "NAOMI TAUSEND",
+                image: "images/naomi-tausend.webp",
+                bio: "A confident woman who makes a living dealing in used cars."
+            },
+            eimi: {
+                number: "23",
+                name: "EIMI SHIMIZU",
+                image: "images/eimi-shimizu.webp",
+                bio: "A street artist who leaves her mark wherever inspiration takes her."
+            },
+            lin: {
+                number: "24",
+                name: "LIN HUA YING",
+                image: "images/lin-hua-ying.webp",
+                bio: "A market owner who knows the people and rhythms of her neighborhood."
+            },
+            randall: {
+                number: "25",
+                name: "RANDALL GRAY",
+                image: "images/randall-gray.webp",
+                bio: "A firefighter accustomed to stepping forward when others need help."
+            },
+            mai: {
+                number: "26",
+                name: "MAI HABARA",
+                image: "images/mai-habara.webp",
+                bio: "A self-employed woman who values doing things on her own terms."
+            }
+        };
+
+        function showPage(id) {
             pages.forEach(page => {
-                page.classList.toggle(
-                    "active-page",
-                    page.id === pageId
-                );
-            });
-
-            menuItems.forEach(item => {
-                item.classList.toggle(
-                    "active",
-                    item.dataset.page === pageId
-                );
+                page.classList.toggle("active", page.id === id);
             });
         }
 
-        menuItems.forEach(item => {
-            item.addEventListener("click", () => {
-                showPage(item.dataset.page);
+        pageButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                showPage(button.dataset.page);
             });
         });
 
-        logo.addEventListener("click", () => {
-            showPage("home");
+        document.querySelectorAll(".character").forEach(button => {
+            button.addEventListener("click", () => {
+                const data = characters[button.dataset.id];
+
+                document.querySelector("#profile-image").src = data.image;
+                document.querySelector("#profile-image").alt = data.name;
+                document.querySelector("#profile-number").textContent = data.number;
+                document.querySelector("#profile-name").textContent = data.name;
+                document.querySelector("#profile-bio").textContent = data.bio;
+
+                showPage("profile");
+            });
         });
     </script>
 
 </body>
 </html>
+
+This version intentionally **doesn't use Oxanium yet**. I want the structure to feel right first; the font can be changed afterward without rebuilding anything.
+
+The important difference is that the character thumbnails are now **fixed at 100×133px**, rather than being allowed to grow with the screen. That should prevent the "why is everything huge?" problem you were seeing.
