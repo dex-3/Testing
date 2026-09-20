@@ -1,105 +1,354 @@
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600&display=swap");
+
+
+/* ------------------------------
+   Base
+------------------------------ */
 
 * {
     box-sizing: border-box;
 }
 
-html,
-body {
-    margin: 0;
+html {
     min-height: 100%;
 }
 
 body {
+    margin: 0;
     min-height: 100vh;
+
     background: #03060a;
     color: #edf6ff;
+
     font-family: "Oxanium", sans-serif;
+    font-weight: 400;
 }
 
-.menu {
+
+/* ------------------------------
+   Layout
+------------------------------ */
+
+.site {
+    position: relative;
     min-height: 100vh;
+
     padding: 32px 40px;
 }
-/* Logo */
+
+
+/* ------------------------------
+   Header / Logo
+------------------------------ */
+
+.header {
+    margin: 0;
+}
 
 .logo {
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    color: #edf6ff;
+
+    font-family: inherit;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.18em;
-    margin: 0 0 45px 0;
+
+    cursor: pointer;
 }
 
-/* Main menu */
+.logo:hover {
+    color: #8fd0ff;
+}
 
-.main-menu {
+
+/* ------------------------------
+   Main Menu
+------------------------------ */
+
+.menu {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+
     width: 220px;
+
+    margin-top: 42px;
+
+    gap: 12px;
 }
 
-.main-menu a {
-    position: relative;
-    display: block;
-    padding: 3px 0;
-    color: #edf6ff;
-    text-decoration: none;
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    padding: 2px 0;
+
+    border: 0;
+    background: none;
+
+    color: rgba(237, 246, 255, 0.55);
+
+    font-family: inherit;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.12em;
-    transition: color 0.15s ease,
-                transform 0.15s ease;
+
+    cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
 }
 
-.selector {
+.menu-item .arrow {
     display: inline-block;
+
     width: 20px;
+
     opacity: 0;
-    transform: translateX(-6px);
-    transition: opacity 0.15s ease,
-                transform 0.15s ease;
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
 }
 
-.main-menu a:hover {
-    color: #8fd0ff;
-    transform: translateX(5px);
+.menu-item:hover,
+.menu-item.active {
+    color: #edf6ff;
+    transform: translateX(4px);
 }
 
-.main-menu a:hover .selector {
+.menu-item:hover .arrow,
+.menu-item.active .arrow {
     opacity: 1;
     transform: translateX(0);
 }
 
-footer {
-    position: absolute;
-    bottom: 25px;
-    left: 40px;
 
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    color: rgba(237, 246, 255, 0.35);
+/* ------------------------------
+   Content
+------------------------------ */
+
+.content {
+    position: absolute;
+
+    top: 32px;
+    left: 340px;
+    right: 40px;
+
+    min-height: calc(100vh - 64px);
 }
 
-/* Mobile */
+.page {
+    display: none;
+}
 
-@media (max-width: 600px) {
-    .logo {
-        margin-bottom: 55px;
+.active-page {
+    display: block;
+}
+
+
+/* ------------------------------
+   Home
+------------------------------ */
+
+.welcome {
+    margin: 80px 0 0;
+
+    color: rgba(237, 246, 255, 0.65);
+
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+
+/* ------------------------------
+   Page Heading
+------------------------------ */
+
+.page-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+}
+
+.page-heading small {
+    color: rgba(237, 246, 255, 0.3);
+
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+}
+
+
+/* ------------------------------
+   Character List
+------------------------------ */
+
+.character-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(250px, 400px));
+
+    column-gap: 70px;
+    row-gap: 6px;
+}
+
+.character-list button {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 4px 0;
+
+    border: 0;
+    background: none;
+
+    color: rgba(237, 246, 255, 0.38);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.character-list button span {
+    margin-left: 18px;
+
+    color: #edf6ff;
+}
+
+.character-list button:hover {
+    color: #8fd0ff;
+    transform: translateX(5px);
+}
+
+.character-list button:hover span {
+    color: #8fd0ff;
+}
+
+
+/* ------------------------------
+   About
+------------------------------ */
+
+.text {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(237, 246, 255, 0.55);
+
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+}
+
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.external-link,
+.social-links a {
+    display: block;
+
+    width: max-content;
+
+    color: rgba(237, 246, 255, 0.65);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.external-link:hover,
+.social-links a:hover {
+    color: #8fd0ff;
+    transform: translateX(5px);
+}
+
+
+/* ------------------------------
+   Status
+------------------------------ */
+
+.status {
+    position: fixed;
+
+    right: 40px;
+    bottom: 25px;
+
+    color: rgba(237, 246, 255, 0.25);
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 800px) {
+
+    .site {
+        padding: 25px 24px;
     }
 
-    .main-menu {
-        min-width: 210px;
-        gap: 20px;
+    .content {
+        position: static;
+
+        margin-top: 60px;
+
+        min-height: 0;
     }
 
-    .main-menu a {
-        font-size: 16px;
+    .character-list {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
     }
 
-    footer {
-        margin-top: 55px;
+    .status {
+        right: 24px;
+        bottom: 20px;
     }
 }
 ```
