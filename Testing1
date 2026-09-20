@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>dex-3 | Character Database</title>
+
+    <meta
+        name="description"
+        content="dex-3 character database and personal portfolio."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            dex-3
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#home" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span>Home</span>
+            </a>
+
+            <a href="#characters" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Character</span>
+            </a>
+
+            <a href="#presets" class="nav-item">
+                <span class="nav-icon">□</span>
+                <span>Presets</span>
+            </a>
+
+            <a href="#about" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>About</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-section">
+
+            <div class="section-label">
+                MUSIC
+            </div>
+
+            <div class="music-box">
+                <button class="music-button" type="button">
+                    ▶
+                </button>
+
+                <div class="music-info">
+                    <span>Not Playing</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar-section social-section">
+
+            <div class="section-label">
+                SOCIAL
+            </div>
+
+            <a
+                href="https://x.com/sorawindy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+                <span>𝕏</span>
+                <span>X / Twitter</span>
+            </a>
+
+            <a
+                href="https://www.pixiv.net/en/users/50033895"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+                <span>P</span>
+                <span>Pixiv</span>
+            </a>
+
+            <a
+                href="https://www.deviantart.com/dex-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+                <span>✦</span>
+                <span>DeviantArt</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <span>© 2026 dex-3</span>
+            <span>Simple. Focus. Create.</span>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="home">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="topbar-title">
+                CHARACTER DATABASE
+            </div>
+
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+                <input
+                    type="search"
+                    placeholder="Search character..."
+                    aria-label="Search character"
+                >
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content" id="characters">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>CHARACTER DATABASE</h1>
+
+                    <p>
+                        Explore the roster of 26 characters.
+                    </p>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter active">ALL</button>
+                    <button class="filter">A–M</button>
+                    <button class="filter">N–Z</button>
+                </div>
+
+            </div>
+
+
+            <!-- CHARACTER GRID -->
+            <div class="character-grid">
+
+                <!-- 01 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/rion-adachi.webp"
+                            alt="Rion Adachi"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Rion Adachi</h2>
+                        <p>Age 20 · Japan · Freelance</p>
+                    </div>
+                </article>
+
+
+                <!-- 02 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/ayami-karasuma.webp"
+                            alt="Ayami Karasuma"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Ayami Karasuma</h2>
+                        <p>Age 28 · Japan · Investigator</p>
+                    </div>
+                </article>
+
+
+                <!-- 03 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/elsa-von-rietveld.webp"
+                            alt="Elsa von Rietveld"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Elsa von Rietveld</h2>
+                        <p>Age 24 · Germany · Driver</p>
+                    </div>
+                </article>
+
+
+                <!-- 04 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/alina-engel.webp"
+                            alt="Alina Engel"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Alina Engel</h2>
+                        <p>Age 27 · Germany · Business Owner</p>
+                    </div>
+                </article>
+
+
+                <!-- 05 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/nova-meledyne.webp"
+                            alt="Nova Meledyne"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Nova Meledyne</h2>
+                        <p>Age 22 · Unknown · Researcher</p>
+                    </div>
+                </article>
+
+
+                <!-- 06 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/kiyoko-karasu.webp"
+                            alt="Kiyoko Karasu"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Kiyoko Karasu</h2>
+                        <p>Age 18 · Japan · Princess</p>
+                    </div>
+                </article>
+
+
+                <!-- 07 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/yuzu-irumi.webp"
+                            alt="Yuzu Irumi"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Yuzu Irumi</h2>
+                        <p>Age 16 · Japan · Shrine Maiden</p>
+                    </div>
+                </article>
+
+
+                <!-- 08 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/ro-eun-yeong.webp"
+                            alt="Ro-Eun Yeong"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Ro-Eun Yeong</h2>
+                        <p>Age 23 · Korea · Student</p>
+                    </div>
+                </article>
+
+
+                <!-- 09 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/kouka-arisato.webp"
+                            alt="Kouka Arisato"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Kouka Arisato</h2>
+                        <p>Age 26 · Japan · Office Worker</p>
+                    </div>
+                </article>
+
+
+                <!-- 10 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/claudine-celesta.webp"
+                            alt="Claudine Celesta"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Claudine Celesta</h2>
+                        <p>Age 29 · France · Journalist</p>
+                    </div>
+                </article>
+
+
+                <!-- 11 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/fia-andini.webp"
+                            alt="Fia Andini"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Fia Andini</h2>
+                        <p>Age 20 · Indonesia · Streamer</p>
+                    </div>
+                </article>
+
+
+                <!-- 12 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/finley-camelia.webp"
+                            alt="Finley Camelia"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Finley Camelia</h2>
+                        <p>Age 21 · USA · Streamer</p>
+                    </div>
+                </article>
+
+
+                <!-- 13 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/milica-belic.webp"
+                            alt="Milica Belic"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Milica Belic</h2>
+                        <p>Age 22 · Serbia · Cosplayer</p>
+                    </div>
+                </article>
+
+
+                <!-- 14 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/mayumi-inoue.webp"
+                            alt="Mayumi Inoue"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Mayumi Inoue</h2>
+                        <p>Age 25 · Japan · Model / Racer</p>
+                    </div>
+                </article>
+
+
+                <!-- 15 -->
+                <article class="character-card">
+                    <div class="portrait">
+                        <img
+                            src="images/ethyln-bernard.webp"
+                            alt="Ethyln Bernard"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="character-info">
+                        <h2>Ethyln Bernard</h2>
+                        <p>Age 24 · France · Café Owner</p>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+
+                <button aria-label="Previous page">
+                    ‹
+                </button>
+
+                <span>1 / 2</span>
+
+                <button aria-label="Next page">
+                    ›
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="simple-section" id="about">
+
+            <h2>ABOUT</h2>
+
+            <p>
+                A simple character database and personal project by dex-3.
+            </p>
+
+        </section>
+
+
+        <!-- PRESETS -->
+        <section class="simple-section" id="presets">
+
+            <h2>PRESETS</h2>
+
+            <p>
+                Character presets and resources.
+            </p>
+
+            <a
+                class="preset-link"
+                href="https://drive.google.com/drive/u/1/folders/1a80VVGi8gMLn3PPjYD0iPaKx3eGbpyL9"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                OPEN PRESETS DRIVE →
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
